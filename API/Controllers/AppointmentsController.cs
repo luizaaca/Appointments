@@ -4,15 +4,34 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using WebAppAngular1.Models.Appointments;
 
 namespace WebAppAngular1.API.Controllers
 {
     public class AppointmentsController : ApiController
     {
         // GET: api/Appointments
-        public IEnumerable<string> Get()
+        public IEnumerable<Appointment> Get()
         {
-            return new string[] { "value1", "value2" };
+            var result = new List<Appointment>();
+
+            result.Add(new Appointment
+            {
+                Id = 0,
+                Date = DateTime.Now.AddDays(1),
+                Length = TimeSpan.FromHours(1),
+                Patient = "João Barbosa"
+            });
+
+            result.Add(new Appointment
+            {
+                Id = 1,
+                Date = DateTime.Now.AddDays(1).AddHours(-2),
+                Length = TimeSpan.FromHours(1.5),
+                Patient = "Maria Silva"
+            });
+
+            return result;
         }
 
         // GET: api/Appointments/5

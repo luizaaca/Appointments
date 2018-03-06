@@ -135,6 +135,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.component.html" />
+    <Content Include="app\appointments\appointments-detail\appointment-detail.component.html" />
+    <Content Include="app\appointments\appointments.component.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -156,10 +159,9 @@
     <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Account\Index.cshtml" />
-    <Content Include="Views\Home\IndexApi.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="API\Controllers\AppointmentsController.cs" />
+    <Compile Include="Api\Controllers\AppointmentsController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -167,12 +169,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Appointments\Appointment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\appointments\appointments-detail\appointment-detail.component.ts" />
+    <TypeScriptCompile Include="app\appointments\appointments.component.ts" />
+    <TypeScriptCompile Include="app\models\appointment.ts" />
+    <TypeScriptCompile Include="app\models\mock-appointments.ts" />
+    <TypeScriptCompile Include="app\service\appointments.service.ts" />
     <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
     <TypeScriptCompile Include="main.ts" />
   </ItemGroup>

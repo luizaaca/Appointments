@@ -1,0 +1,6 @@
+﻿<h2>{{title}}</h2>
+<ul>
+    <li *ngFor="let appointment of appointments">
+        <span>{{appointment.Patient}}</span> : {{appointment.Date}} - {{appointment.Length}}
+    </li>
+</ul>
