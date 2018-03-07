@@ -1,5 +1,5 @@
 ﻿import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Appointment } from '../models/appointment';
 import 'rxjs/add/operator/map';
@@ -8,8 +8,10 @@ import 'rxjs/add/operator/map';
 export class AppointmentService {
     constructor(private http: HttpClient) { }
 
+    private headers: HttpHeaders;
+
     getAppointments(): Observable<Appointment[]> {
-        return this.http.get<Appointment[]>("/api/appointments")
+        return this.http.get<Appointment[]>("/api/appointments", { headers: this.headers })
             .map(function (data: any[]) {
                 var result = new Array<Appointment>();
                 data.forEach(function (item) {

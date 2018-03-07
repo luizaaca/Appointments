@@ -17,7 +17,7 @@ var AppointmentService = /** @class */ (function () {
         this.http = http;
     }
     AppointmentService.prototype.getAppointments = function () {
-        return this.http.get("/api/appointments")
+        return this.http.get("/api/appointments", { headers: this.headers })
             .map(function (data) {
             var result = new Array();
             data.forEach(function (item) {
