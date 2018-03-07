@@ -138,6 +138,7 @@
     <Content Include="app\app.component.html" />
     <Content Include="app\appointments\appointments-detail\appointment-detail.component.html" />
     <Content Include="app\appointments\appointments.component.html" />
+    <Content Include="app\login\login.component.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -173,11 +174,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\app-routing.module.ts" />
     <TypeScriptCompile Include="app\app.component.spec.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\appointments\appointments-detail\appointment-detail.component.ts" />
     <TypeScriptCompile Include="app\appointments\appointments.component.ts" />
+    <TypeScriptCompile Include="app\login\login.component.ts" />
     <TypeScriptCompile Include="app\models\appointment.ts" />
     <TypeScriptCompile Include="app\models\mock-appointments.ts" />
     <TypeScriptCompile Include="app\service\appointments.service.ts" />

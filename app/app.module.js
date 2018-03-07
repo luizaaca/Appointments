@@ -9,7 +9,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/common/http");
+var app_routing_module_1 = require("./app-routing.module");
+var common_1 = require("@angular/common");
 var app_component_1 = require("./app.component");
+var login_component_1 = require("./login/login.component");
 var appointments_component_1 = require("./appointments/appointments.component");
 var appointments_service_1 = require("./service/appointments.service");
 var AppModule = /** @class */ (function () {
@@ -17,9 +20,9 @@ var AppModule = /** @class */ (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, http_1.HttpClientModule],
-            providers: [appointments_service_1.AppointmentService],
-            declarations: [app_component_1.AppComponent, appointments_component_1.AppointmentsComponent],
+            imports: [platform_browser_1.BrowserModule, http_1.HttpClientModule, app_routing_module_1.AppRoutingModule],
+            providers: [appointments_service_1.AppointmentService, { provide: common_1.APP_BASE_HREF, useValue: '/' }],
+            declarations: [login_component_1.LoginComponent, app_component_1.AppComponent, appointments_component_1.AppointmentsComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
